@@ -13,15 +13,12 @@ void mostrar() {
     cout << "\t    1   2   3\n";
     cout << "\t  ╔═══╦═══╦═══╗\n";
     
-    // Linha 1
     cout << "\t1 ║ " << jogo[0][0].a << " ║ " << jogo[0][1].a << " ║ " << jogo[0][2].a << " ║\n";
     cout << "\t  ╠═══╬═══╬═══╣\n";
 
-    // Linha 2
     cout << "\t2 ║ " << jogo[1][0].a << " ║ " << jogo[1][1].a << " ║ " << jogo[1][2].a << " ║\n";
     cout << "\t  ╠═══╬═══╬═══╣\n";
     
-    // Linha 3
     cout << "\t3 ║ " << jogo[2][0].a << " ║ " << jogo[2][1].a << " ║ " << jogo[2][2].a << " ║\n";
     cout << "\t  ╚═══╩═══╩═══╝\n";
 }
@@ -89,7 +86,7 @@ int main() {
             system("cls");
             cout << endl << "Essa posica ja foi usada, escolha outra!" << endl;
             mostrar();
-            i--; // repete o turno
+            i--;
             continue;
         } else {
             jogo[linha - 1][coluna - 1].a = jogador;
@@ -113,6 +110,7 @@ int main() {
 
     cout << endl << "Fim de jogo!" << endl;
 }
+
 
 
 
