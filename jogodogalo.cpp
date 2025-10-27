@@ -2,7 +2,7 @@
 using namespace std;
 
 struct galo {
-    char a = ' ';
+    char a;
     bool b = false;
 };
 
@@ -62,11 +62,11 @@ int main() {
 
 
     while (true) {
-    cout << player1 << ", digite se quer ser X ou O: ";
+    cout << player1 << ", Escolha entre X e O ";
     cin >> escolha;
 
     if (escolha == 'X' || escolha == 'O') {
-        jogador = escolha; // escolha válida, sai do ciclo
+        jogador = escolha;
         break;
     } else {
         cout << "Escolha invalida. Digite apenas X ou O." << endl;
@@ -80,9 +80,9 @@ int main() {
 
     for (int i = 0; i < 9; i++) {
         cout << endl << nomeAtual << " (" << jogador << "), e a sua vez!" << endl;
-        cout << "Digite a linha que queira jogar: ";
+        cout << "Digite a linha para jogar(1-3): ";
         cin >> linha;
-        cout << "Digite a coluna que queira jogar: ";
+        cout << "Digite a coluna para jogar(1-3): ";
         cin >> coluna;
 
         if (jogo[linha - 1][coluna - 1].b == true) {
@@ -113,6 +113,7 @@ int main() {
 
     cout << endl << "Fim de jogo!" << endl;
 }
+
 
 
 
