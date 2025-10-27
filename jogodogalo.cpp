@@ -9,11 +9,21 @@ struct galo {
 galo jogo[3][3];
 
 void mostrar() {
-    cout << endl << "Jogo do galo" << endl;
-    cout << "   1   2   3" << endl;
-    cout << "1 [" << jogo[0][0].a << "] [" << jogo[0][1].a << "] [" << jogo[0][2].a << "]" << endl;
-    cout << "2 [" << jogo[1][0].a << "] [" << jogo[1][1].a << "] [" << jogo[1][2].a << "]" << endl;
-    cout << "3 [" << jogo[2][0].a << "] [" << jogo[2][1].a << "] [" << jogo[2][2].a << "]" << endl;
+    cout << "\n\t🎮 JOGO DO GALO 🎮\n\n";
+    cout << "\t    1   2   3\n";
+    cout << "\t  ╔═══╦═══╦═══╗\n";
+    
+    // Linha 1
+    cout << "\t1 ║ " << jogo[0][0].a << " ║ " << jogo[0][1].a << " ║ " << jogo[0][2].a << " ║\n";
+    cout << "\t  ╠═══╬═══╬═══╣\n";
+
+    // Linha 2
+    cout << "\t2 ║ " << jogo[1][0].a << " ║ " << jogo[1][1].a << " ║ " << jogo[1][2].a << " ║\n";
+    cout << "\t  ╠═══╬═══╬═══╣\n";
+    
+    // Linha 3
+    cout << "\t3 ║ " << jogo[2][0].a << " ║ " << jogo[2][1].a << " ║ " << jogo[2][2].a << " ║\n";
+    cout << "\t  ╚═══╩═══╩═══╝\n";
 }
 bool verificarVitoria() {
     for (int i = 0; i < 3; i++) {
@@ -103,6 +113,7 @@ int main() {
 
     cout << endl << "Fim de jogo!" << endl;
 }
+
 
 
 
