@@ -15,6 +15,25 @@ void mostrar() {
     cout << "2 [" << jogo[1][0].a << "] [" << jogo[1][1].a << "] [" << jogo[1][2].a << "]" << endl;
     cout << "3 [" << jogo[2][0].a << "] [" << jogo[2][1].a << "] [" << jogo[2][2].a << "]" << endl;
 }
+bool verificarVitoria() {
+    for (int i = 0; i < 3; i++) {
+        if (jogo[i][0].a == jogo[i][1].a && jogo[i][1].a == jogo[i][2].a && jogo[i][0].a != ' ') {
+            return true;
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        if (jogo[0][i].a == jogo[1][i].a && jogo[1][i].a == jogo[2][i].a && jogo[0][i].a != ' ') {
+            return true;
+        }
+    }
+    if (jogo[0][0].a == jogo[1][1].a && jogo[1][1].a == jogo[2][2].a && jogo[0][0].a != ' ') {
+        return true;
+    }
+    if (jogo[0][2].a == jogo[1][1].a && jogo[1][1].a == jogo[2][0].a && jogo[0][2].a != ' ') {
+        return true;
+    }
+    return false;
+}
 
 int main() {
     int coluna;
@@ -69,7 +88,10 @@ int main() {
 
         system("cls");
         mostrar();
-
+        if (verificarVitoria()) {
+            cout << endl << "Parabéns, " << nomeAtual << "! Você venceu!" << endl;
+            break;
+        }
         if (jogador == 'X') {
             jogador = 'O';
             nomeAtual = player2;
@@ -81,4 +103,6 @@ int main() {
 
     cout << endl << "Fim de jogo!" << endl;
 }
+
+
 
